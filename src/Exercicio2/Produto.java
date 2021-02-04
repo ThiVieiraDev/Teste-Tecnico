@@ -1,20 +1,23 @@
 package Exercicio2;
 
+// Classe abstrata Produto
 public abstract class Produto {
+    // Atributos
     private String nome;
     private double preco;
     private int qtd;
 
+    //Construtores
     public Produto(){
 
     }
-
     public Produto(String nome, double preco, int qtd) {
         this.nome = nome;
         this.preco = preco;
         this.qtd = qtd;
     }
 
+    // Getters and Setters
     public String getNome() {
         return nome;
     }
