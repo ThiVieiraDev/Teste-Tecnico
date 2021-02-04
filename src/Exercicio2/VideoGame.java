@@ -1,7 +1,7 @@
 package Exercicio2;
 
 // Classe VideoGame herdando de Produto
-public class VideoGame extends Produto{
+public class VideoGame extends Produto implements Imposto{
     private String marca;
     private String modelo;
     private boolean isUsado;
@@ -38,4 +38,14 @@ public class VideoGame extends Produto{
         isUsado = usado;
     }
 
+    // Método herdado da interface Imposto
+    @Override
+    public double calculaImposto() {
+        if (isUsado){
+            return super.getPreco() + (super.getPreco() * 0.25);
+        }
+        else {
+            return super.getPreco() + (super.getPreco() * 0.45);
+        }
+    }
 }

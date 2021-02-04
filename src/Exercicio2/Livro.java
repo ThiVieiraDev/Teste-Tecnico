@@ -1,7 +1,7 @@
 package Exercicio2;
 
 //Classe Livro herdando de Produto
-public class Livro extends Produto{
+public class Livro extends Produto implements Imposto{
     //Atributos da classe Livro
     private String autor;
     private String tema;
@@ -37,5 +37,16 @@ public class Livro extends Produto{
     }
     public void setQtdPag(int qtdPag) {
         this.qtdPag = qtdPag;
+    }
+
+    // Método herdado da interface Imposto
+    @Override
+    public double calculaImposto() {
+        if (tema == "educativo"){
+            return 0;
+        }
+        else {
+            return super.getPreco() + (super.getPreco() * 0.1);
+        }
     }
 }

@@ -1,6 +1,7 @@
 package Exercicio2;
 
-public abstract interface Imposto {
+public interface Imposto {
 
+    public double calculaImposto();
 
 }
